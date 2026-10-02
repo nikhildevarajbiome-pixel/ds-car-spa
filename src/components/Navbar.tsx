@@ -18,8 +18,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)]">
-      <div className="mx-auto max-w-[1440px] px-3 pt-3 sm:px-6 sm:pt-4 lg:px-10">
+    <header className="fixed inset-x-0 top-0 z-50 pt-0">
+      <div className="mx-auto max-w-[1440px] px-3 pt-1 sm:px-6 sm:pt-3 lg:px-10">
 
         {/* Premium Glass Navbar */}
         <div className="relative flex h-[66px] items-center justify-between rounded-full border border-white/[0.14] bg-[#111111]/75 px-4 shadow-[0_12px_45px_rgba(0,0,0,0.3)] backdrop-blur-2xl sm:h-[74px] sm:px-7">
@@ -84,7 +84,7 @@ export default function Navbar() {
             <span className="text-sm">↗</span>
           </a>
 
-          {/* Mobile / Tablet Controls */}
+          {/* Mobile Controls */}
           <div className="relative z-10 flex items-center gap-2 lg:hidden">
             <a
               href={GENERIC_BOOKING}
@@ -114,7 +114,7 @@ export default function Navbar() {
         <nav
           id="mobile-nav"
           aria-hidden={!open}
-          className={`absolute left-3 right-3 top-[calc(100%+10px)] rounded-[26px] border border-white/10 bg-[#111111]/95 p-3 shadow-[0_20px_70px_rgba(0,0,0,0.5)] backdrop-blur-3xl transition-all duration-300 sm:left-6 sm:right-6 lg:hidden ${
+          className={`absolute left-3 right-3 top-[calc(100%+4px)] rounded-[26px] border border-white/10 bg-[#111111]/95 p-3 shadow-[0_20px_70px_rgba(0,0,0,0.5)] backdrop-blur-3xl transition-all duration-300 sm:left-6 sm:right-6 lg:hidden ${
             open
               ? "visible translate-y-0 opacity-100"
               : "invisible pointer-events-none -translate-y-3 opacity-0"
