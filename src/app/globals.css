@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 88px; background: #07101F; }
+body { background: #07101F; color: #F5F8FC; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid #2F7BFF; outline-offset: 2px; }
+
+/* One-time paint-highlight sweep across the hero headline */
+.shine {
+  background: linear-gradient(100deg, #F5F8FC 40%, #8fbcff 50%, #F5F8FC 60%);
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sweep 2.4s ease-out 0.3s 1 both;
+}
+@keyframes sweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .shine { animation: none; background-position: 0 0; }
+}
